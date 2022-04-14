@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/MeatCow/iss_spotter#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "request": "^2.88.2"
   },
   "devDependencies": {

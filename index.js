@@ -1,5 +1,14 @@
-const {fetchMyIP} = require('./lib/iss');
+const {fetchMyIP, fetchCoordsByIP} = require('./lib/iss');
 
 fetchMyIP((err, ip) => {
-  console.log("My IP is", ip);
+  if (err) {
+    console.log(err);
+    return;
+  }
+  fetchCoordsByIP(ip, (err, data) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+  });
 });
